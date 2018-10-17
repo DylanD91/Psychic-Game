@@ -1,0 +1,45 @@
+body {
+    color: #ffffff;
+    background-color: #1CB9FC;
+}
+
+img {
+	max-width: 50%;
+	margin-top: 20px;
+}
+
+h1 {
+	font-family: 'Kodchasan';
+	font-size: 350%;
+	margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+	font-family: 'Kodchasan';
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+.rowStats {
+	font-weight: bold;
+	font-size: 150%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+    
+.rowBkgd {
+	background-color: #eeeeee;
+	color: #212121; 
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.rowStats:last-child {
+	padding-top: 30px;
+	border-top: 1px solid #eeeeee;
+	margin-top: 15px;
+	text-align: center;
+	font-weight: normal;
+	letter-spacing: 1px;
+}

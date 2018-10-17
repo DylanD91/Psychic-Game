@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The Psychic Game</title>
+
+	<!-- Reset CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/CSS/style.css"
+
+	<!-- Setting the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- BOOTSTRAP  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/Javascript/game.js"></script>
+
+	<!-- Style CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Kodchasan" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+
+		
+			<img src="assets/Images/psychic-672x372.jpg" alt="Psychic Reader" class="center-block">
+			<h1 class="text-center text-uppercase">The Psychic Game</h1>
+			<div class="text-center">
+				<p>Try to guess which letter your computer is thinking of right now.
+				<br>(Choose from a to z) </p>
+			</div>
+
+			<!-- Game Stats in Sub-Rows -->
+
+				
+				<div class="row rowStats">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rowBkgd">
+						<h4>Wins:</h4>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rowBkgd">
+						<h4 id="wins">0</h4>
+					</div>
+				</div>
+
+				<!-- LOSSES -->
+				<div class="row rowStats">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<h4>Losses:</h4>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<h4 id="losses">0</h4>
+					</div>
+				</div>
+
+				<!-- GUESSES LEFT -->
+				<div class="row rowStats">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rowBkgd">
+						<h4>Guesses Left:</h4>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rowBkgd">
+						<h4 id="guessesLeft">10</h4>
+					</div>
+				</div>
+
+				<!-- LETTERS TRIED SO FAR -->
+				<div class="row rowStats">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<h4>Letters You Have Tried So Far:</h4>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<h4 id="soFar"></h4>
+					</div>
+				</div>
+
+				<!-- RESET INSTRUCTION -->
+				<div class="row rowStats">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h6>To reset the stats, please refresh your browser.</h6>
+					</div>
+				</div>
+
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
