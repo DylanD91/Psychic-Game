@@ -1,16 +1,3 @@
-/* RULES FOR THE GAME:
-The computer selects a random letter.
-The user selects their letter.
-Make sure user selection is
-Capture the computer's choice and the user's guess
-Look at the choice and guess
-Determine how many wins, and losses 
-Count the guesses made by the user
-Save all guesses made by user
-When the user wins, reset game. But, not the stats
-When user runs out of guesses, reset game, but not the stats
-Display all game stats to the user */
-
 // Create an Array for the computer and user to choose from
 var theAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
