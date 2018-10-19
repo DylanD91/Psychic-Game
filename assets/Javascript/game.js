@@ -1,52 +1,60 @@
-// Create an Array for the computer and user to choose from
+// I created an array for the computer and online user.
 var theAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-//Create variables to use as game stats. They start at 0; max number of guesses; and an empty array.
+//I created variables. They start at 0, the max number of guesses, and an empty array.
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var soFar = [];
-var compChoice; //declared only
+var compChoice; 
 
-// Creating a new computer choice
+// New computer choice
 	compChoice = theAlphabet[Math.floor(Math.random() * theAlphabet.length)];
 		console.log("The computer has chosen the letter: " + compChoice);
 
-//Script that starts every time the user presses a key, on the key release (onkeyup):
+//This is what starts every time the user presses a key, and on the key release:
 document.onkeyup = function(event) {
 
-	//User presses a key, record what key was pressed under var userGuess and convert to lower case.
+	//The user presses a key, it records what key was pressed under var userGuess.
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log(userGuess);
 
-	//Log all keys pressed by user into soFar by pushing them into the empty array.
+	//This section logs all the keys pressed by the user into "soFar," by pushing them into the empty array.
 	if (event.keyCode >= 65 && event.keyCode <= 90) {
 		soFar.push(userGuess);
 		document.getElementById("soFar").innerHTML = soFar.join(", ");
 	}
 
 
-	//Check if the user entered the correct letters
-		if (event.keyCode >= 65 && event.keyCode <= 90) { //If the letter pressed IS part of the alphabet, then run the comparison:
-			//If user guesses right, increase the wins count, reset guesses left, reset so far, pick a new letter:
+	//This checks if the user entered the correct letters
+		if (event.keyCode >= 65 && event.keyCode <= 90) { 
+
+
+			//If the user guesses right, increase the number of wins and reset the number of guesses left.
 			if (userGuess == compChoice) {
 				wins++;
 				guessesLeft--;
 				soFar = [];
 				guessesLeft = 10;
-				//Display updated stats to user:
+
+
+				//Show updated stats
 				document.getElementById("soFar").innerHTML = soFar.join(", ");
 				document.getElementById("wins").innerHTML = wins;
 				document.getElementById("guessesLeft").innerHTML = guessesLeft;
 				document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
+
 				// Alert the user
 				alert("You ARE a psychic! How did you know what letter I was thinking about?!?! '" + userGuess + "' ?");
 				alert("Want to try again?");
+
+
 				//Choose another letter
 				compChoice = theAlphabet[Math.floor(Math.random() * theAlphabet.length)];
 				console.log("The computer has chosen the letter: " + compChoice);	
 
-			} else { //If user guesses wrong, increase the losses count, and decrease number of guessesLeft.
+			} else { //If user guesses incorrect then increase the losses count, and  then decrease number of guesses left.
 				losses++;
 				guessesLeft--;
 				//Display updated stats to user:
@@ -59,17 +67,20 @@ document.onkeyup = function(event) {
 		}
 
 	//When the user has no more guesses left, reset the counters back to zero.
-		//If the guessesLeft == 0, reset guessesLeft back to 10, and empty the soFar guesses, pick a new letter.
+		//If the guessesLeft == 0, reset guessesLeft back to 10.
 		if (guessesLeft == 0) {
 			guessesLeft = 10;
 			soFar = [];
+
 			//Display updated stats to user:
 			document.getElementById("guessesLeft").innerHTML = guessesLeft;
 			document.getElementById("soFar").innerHTML = soFar.join(", ");
+
 			// Alert the user
 			alert("THE GAME IS OVER")
 			alert("Uh oh! You ran out of guesses. Do you want to try again?")
-			//now Choose another letter
+
+			//Choose a new letter
 			compChoice = theAlphabet[Math.floor(Math.random() * theAlphabet.length)];
 			console.log("The computer has chosen the letter: " + compChoice);
 		}	
